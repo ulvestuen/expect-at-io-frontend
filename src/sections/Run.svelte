@@ -1,34 +1,30 @@
 <script>
-  function runTest(event) {
-    fetch("http://localhost:5000/run", {
-      method: "POST"
-    })
-      .then(response => response.text())
-      .then(result => {
-        console.log("Success:", result);
-      })
-      .catch(error => {
-        console.error("Error:", error);
-      });
-  }
+    async function runTest() {
+        let response = await fetch("http://localhost:5000/run", {
+            method: "POST"
+        });
+        let responseText = response.text();
+        console.log(responseText);
+    }
 </script>
 
 <style>
-  .center {
-    display: flex;
-    justify-content: center;
-  }
-  .button {
-    border-radius: 50%;
-    border-width: 0.1em;
-    border-style: solid;
-    border-color: black;
-    width: 10em;
-    height: 10em;
-    margin: 1em;
-  }
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button {
+        border-radius: 50%;
+        border-width: 0.1em;
+        border-style: solid;
+        border-color: black;
+        width: 10em;
+        height: 10em;
+        margin: 1em;
+    }
 </style>
 
 <section class="center">
-  <button class="button" on:click={runTest}>Load</button>
+    <button class="button" on:click={runTest}>START TEST</button>
 </section>
