@@ -1,7 +1,7 @@
 <script>
     let inputDataList = [];
     let updateInputDataList = async () => {
-        const response = await fetch("http://localhost:5000/inputdata", {
+        const response = await fetch("http://localhost:5000/spec/input", {
             method: "GET"
         });
         const responseJson = await response.json();

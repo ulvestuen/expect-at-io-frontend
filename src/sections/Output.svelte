@@ -1,7 +1,7 @@
 <script>
     let outputDataList = [];
     let updateOutputDataList = async () => {
-        const response = await fetch("http://localhost:5000/outputdata", {
+        const response = await fetch("http://localhost:5000/spec/output", {
             method: "GET"
         });
         const responseJson = await response.json();
