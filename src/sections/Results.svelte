@@ -20,8 +20,53 @@
         display: flex;
         justify-content: center;
     }
+
+    table {
+        border-width: 1px;
+        border-spacing: 0;
+        border-style: solid;
+        border-collapse: separate;
+        background-color: white;
+    }
+
+    table thead td {
+        border-width: 1px;
+        padding: 3px;
+        border-style: solid;
+        border-color: gray;
+        background-color: darkgray;
+    }
+
+    table tbody td {
+        border-width: 1px;
+        padding: 3px;
+        border-style: solid;
+        border-color: gray;
+        background-color: lightgray;
+    }
+
+    table caption {
+        caption-side: top;
+        text-align: left;
+    }
 </style>
 
 <section class="center">
-    <pre>{JSON.stringify(resultList, null, '  ')}</pre>
+    <table>
+        <caption>Results</caption>
+        <thead>
+        <tr>
+            <td>Test case ID</td>
+            <td>Result</td>
+        </tr>
+        </thead>
+        <tbody>
+        {#each resultList as testResult}
+            <tr>
+                <td>{testResult.test_id}</td>
+                <td>{testResult.result}</td>
+            </tr>
+        {/each}
+        </tbody>
+    </table>
 </section>

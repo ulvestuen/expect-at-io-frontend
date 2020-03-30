@@ -23,6 +23,11 @@
         height: 10em;
         margin: 1em;
     }
+
+    .button:hover {
+        border-width: 0.2em;
+        font-weight: bold;
+    }
 </style>
 
 <section class="center">

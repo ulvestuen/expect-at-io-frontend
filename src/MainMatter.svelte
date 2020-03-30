@@ -1,10 +1,9 @@
 <script>
     export let content;
     import Load from "./sections/Load.svelte";
-    import Input from "./sections/Input.svelte";
-    import Output from "./sections/Output.svelte";
     import Run from "./sections/Run.svelte";
     import Results from "./sections/Results.svelte";
+    import TestCases from "./sections/TestCases.svelte";
 </script>
 
 <style>
@@ -14,11 +13,8 @@
 {#if content === 'Load'}
     <Load/>
 {/if}
-{#if content === 'Input'}
-    <Input/>
-{/if}
-{#if content === 'Output'}
-    <Output/>
+{#if content === 'TestCases'}
+    <TestCases/>
 {/if}
 {#if content === 'Run'}
     <Run/>

@@ -31,6 +31,7 @@
         border-style: solid;
         border-color: black;
         width: 36em;
+        background-color: whitesmoke;
     }
 
     .center {
